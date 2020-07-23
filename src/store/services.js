@@ -1,5 +1,10 @@
 import axios from "axios"
 import {} from "react-native-dotenv"
+const plugin13 = axios.create({
+  baseURL:
+    "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/7238/storyboard/8485/",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const newPlugin232 = axios.create({
   baseURL:
     "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/8004/storyboard/9273/",
@@ -38,6 +43,24 @@ function api_v1_login_create() {
 }
 function api_v1_signup_create(requestBody) {
   return mobile23API.post(`/api/v1/signup/`, requestBody)
+}
+function api_v1_ttest_list() {
+  return mobile23API.get(`/api/v1/ttest/`)
+}
+function api_v1_ttest_create(requestBody) {
+  return mobile23API.post(`/api/v1/ttest/`, requestBody)
+}
+function api_v1_ttest_read() {
+  return mobile23API.get(`/api/v1/ttest/{id}/`)
+}
+function api_v1_ttest_update(requestBody) {
+  return mobile23API.put(`/api/v1/ttest/{id}/`, requestBody)
+}
+function api_v1_ttest_partial_update(requestBody) {
+  return mobile23API.patch(`/api/v1/ttest/{id}/`, requestBody)
+}
+function api_v1_ttest_delete() {
+  return mobile23API.delete(`/api/v1/ttest/{id}/`)
 }
 function rest_auth_login_create(requestBody) {
   return mobile23API.post(`/rest-auth/login/`, requestBody)
@@ -83,6 +106,12 @@ export const apiService = {
   api_v1_homepage_partial_update,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_ttest_list,
+  api_v1_ttest_create,
+  api_v1_ttest_read,
+  api_v1_ttest_update,
+  api_v1_ttest_partial_update,
+  api_v1_ttest_delete,
   rest_auth_login_create,
   rest_auth_logout_list,
   rest_auth_logout_create,
