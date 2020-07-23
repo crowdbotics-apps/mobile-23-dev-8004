@@ -100,7 +100,7 @@ export class _Blank extends React.Component {
           textShadow: "0pt 0pt 0pt #000000",
           textDecoration: "none",
           textTransform: "none",
-          lineHeight: "1"
+          lineHeight: "10"
         }}
         value={this.state.Input_4}
         onChangeText={nextValue => this.setState({ Input_4: nextValue })}
@@ -139,7 +139,7 @@ export class _Blank extends React.Component {
           textShadow: "0pt 0pt 0pt #000000",
           textDecoration: "none",
           textTransform: "none",
-          lineHeight: "10"
+          lineHeight: "8"
         }}
         value={this.state.Input_5}
         onChangeText={nextValue => this.setState({ Input_5: nextValue })}
@@ -174,7 +174,7 @@ export class _Blank extends React.Component {
           textShadow: "0pt 0pt 0pt #000000",
           textDecoration: "none",
           textTransform: "none",
-          lineHeight: "1"
+          lineHeight: "7"
         }}
         date={this.state.Datepicker_6}
         onSelect={nextValue => this.setState({ Datepicker_6: nextValue })}
@@ -238,7 +238,7 @@ export class _Blank extends React.Component {
           textShadow: "0pt 0pt 0pt #000000",
           textDecoration: "none",
           textTransform: "none",
-          lineHeight: "10"
+          lineHeight: "15"
         }}
         checked={this.state.Radio_9}
         onChange={nextChecked => this.setState({ Radio_9: nextChecked })}
