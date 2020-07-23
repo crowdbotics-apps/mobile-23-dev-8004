@@ -24,7 +24,7 @@ export class _Blank extends React.Component {
 
   state = {
     Toggle_4: true,
-    Input_6: "",
+    Input_6: "hgfhgfh",
     Input_2: "",
     Radio_4: true,
     CheckBox_5: true
