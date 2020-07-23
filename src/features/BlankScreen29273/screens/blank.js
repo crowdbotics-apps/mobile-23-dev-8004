@@ -23,11 +23,11 @@ export class _Blank extends React.Component {
   }
 
   state = {
-    Input_6: "hgfhgfh",
-    Toggle_4: true,
     Input_2: "test",
-    Radio_4: true,
-    CheckBox_5: true
+    Toggle_4: true,
+    Input_6: "hgfhgfh",
+    CheckBox_5: true,
+    Radio_4: true
   }
 
   render = () => (
@@ -103,6 +103,78 @@ export class _Blank extends React.Component {
       >
         Press me!
       </Button>
+      <Input
+        placeholder="Sample text input placeholder"
+        editable={true}
+        multiline={true}
+        textStyle={{ height: 100, fontSize: 20, color: "#000000" }}
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          fontSize: 20,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontStyle: "normal",
+          fontWeight: "normal",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textShadow: "0pt 0pt 0pt #000000",
+          textDecoration: "underline overline",
+          textTransform: "uppercase",
+          lineHeight: 1
+        }}
+        value={this.state.Input_2}
+        onChangeText={nextValue => this.setState({ Input_2: nextValue })}
+      />
+      <Toggle
+        text="switch ON/OFF"
+        activeColor="#409EFF"
+        inactiveColor="#C0CCDA"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textShadow: "0pt 0pt 0pt #000000",
+          textDecoration: "underline overline",
+          textTransform: "uppercase",
+          lineHeight: 1
+        }}
+        checked={this.state.Toggle_4}
+        onChange={nextChecked => this.setState({ Toggle_4: nextChecked })}
+      />
       <Text
         style={{
           marginLeft: 0,
@@ -175,10 +247,8 @@ export class _Blank extends React.Component {
         value={this.state.Input_6}
         onChangeText={nextValue => this.setState({ Input_6: nextValue })}
       />
-      <Toggle
-        text="switch ON/OFF"
-        activeColor="#409EFF"
-        inactiveColor="#C0CCDA"
+      <CheckBox
+        text="Checkbox"
         disabled={false}
         style={{
           marginLeft: 0,
@@ -202,50 +272,11 @@ export class _Blank extends React.Component {
           borderRadius: 0,
           textShadow: "0pt 0pt 0pt #000000",
           textDecoration: "underline overline",
-          textTransform: "uppercase",
+          textTransform: "none",
           lineHeight: 1
         }}
-        checked={this.state.Toggle_4}
-        onChange={nextChecked => this.setState({ Toggle_4: nextChecked })}
-      />
-      <Input
-        placeholder="Sample text input placeholder"
-        editable={true}
-        multiline={true}
-        textStyle={{ height: 100, fontSize: 20, color: "#000000" }}
-        style={{
-          width: "100%",
-          marginLeft: 0,
-          marginRight: 0,
-          marginTop: 5,
-          marginBottom: 5,
-          paddingLeft: 5,
-          paddingRight: 5,
-          paddingTop: 5,
-          paddingBottom: 5,
-          overflow: "visible",
-          textAlign: "left",
-          verticalAlign: "baseline",
-          fontSize: 20,
-          color: "#000000",
-          backgroundColor: "#ffffff",
-          fontStyle: "normal",
-          fontWeight: "normal",
-          borderColor: "#000000",
-          borderStyle: "solid",
-          borderWidth: 0,
-          borderLeftWidth: 0,
-          borderRightWidth: 0,
-          borderTopWidth: 0,
-          borderBottomWidth: 0,
-          borderRadius: 0,
-          textShadow: "0pt 0pt 0pt #000000",
-          textDecoration: "underline overline",
-          textTransform: "uppercase",
-          lineHeight: 1
-        }}
-        value={this.state.Input_2}
-        onChangeText={nextValue => this.setState({ Input_2: nextValue })}
+        checked={this.state.CheckBox_5}
+        onChange={nextChecked => this.setState({ CheckBox_5: nextChecked })}
       />
       <Radio
         text="Radio button"
@@ -277,37 +308,6 @@ export class _Blank extends React.Component {
         }}
         checked={this.state.Radio_4}
         onChange={nextChecked => this.setState({ Radio_4: nextChecked })}
-      />
-      <CheckBox
-        text="Checkbox"
-        disabled={false}
-        style={{
-          marginLeft: 0,
-          marginRight: 0,
-          marginTop: 5,
-          marginBottom: 5,
-          paddingLeft: 5,
-          paddingRight: 5,
-          paddingTop: 5,
-          paddingBottom: 5,
-          overflow: "visible",
-          textAlign: "left",
-          verticalAlign: "baseline",
-          borderColor: "#000000",
-          borderStyle: "solid",
-          borderWidth: 0,
-          borderLeftWidth: 0,
-          borderRightWidth: 0,
-          borderTopWidth: 0,
-          borderBottomWidth: 0,
-          borderRadius: 0,
-          textShadow: "0pt 0pt 0pt #000000",
-          textDecoration: "underline overline",
-          textTransform: "none",
-          lineHeight: 1
-        }}
-        checked={this.state.CheckBox_5}
-        onChange={nextChecked => this.setState({ CheckBox_5: nextChecked })}
       />
     </View>
   )
