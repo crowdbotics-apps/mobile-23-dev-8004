@@ -22,7 +22,13 @@ export class _Blank extends React.Component {
     }
   }
 
-  state = { Datepicker_2: new Date("07/23/2020"), Toggle_4: true, Input_6: "" }
+  state = {
+    Toggle_4: true,
+    Input_6: "",
+    Input_2: "",
+    Radio_4: true,
+    CheckBox_5: true
+  }
 
   render = () => (
     <View
@@ -61,69 +67,6 @@ export class _Blank extends React.Component {
         backgroundSize: "auto"
       }}
     >
-      <Datepicker
-        style={{
-          width: "100%",
-          marginLeft: 0,
-          marginRight: 0,
-          marginTop: 5,
-          marginBottom: 5,
-          paddingLeft: 5,
-          paddingRight: 5,
-          paddingTop: 5,
-          paddingBottom: 5,
-          overflow: "visible",
-          textAlign: "left",
-          verticalAlign: "baseline",
-          fontSize: 20,
-          color: "#000000",
-          backgroundColor: "#ffffff",
-          fontStyle: "normal",
-          fontWeight: "normal",
-          borderColor: "#000000",
-          borderStyle: "solid",
-          borderWidth: 0,
-          borderLeftWidth: 0,
-          borderRightWidth: 0,
-          borderTopWidth: 0,
-          borderBottomWidth: 0,
-          borderRadius: 0,
-          textShadow: "0pt 0pt 0pt #000000",
-          textDecoration: "none",
-          textTransform: "none",
-          lineHeight: 1
-        }}
-        date={this.state.Datepicker_2}
-        onSelect={nextValue => this.setState({ Datepicker_2: nextValue })}
-      />
-      <Slider
-        value={50}
-        minimumValue={0}
-        maximumValue={100}
-        step={1}
-        disabled={true}
-        style={{
-          marginLeft: 0,
-          marginRight: 0,
-          marginTop: 5,
-          marginBottom: 5,
-          paddingLeft: 5,
-          paddingRight: 5,
-          paddingTop: 5,
-          paddingBottom: 5,
-          overflow: "visible",
-          textAlign: "left",
-          verticalAlign: "baseline",
-          borderColor: "#000000",
-          borderStyle: "solid",
-          borderWidth: 0,
-          borderLeftWidth: 0,
-          borderRightWidth: 0,
-          borderTopWidth: 0,
-          borderBottomWidth: 0,
-          borderRadius: 0
-        }}
-      />
       <Toggle
         text="switch ON/OFF"
         activeColor="#409EFF"
@@ -150,8 +93,8 @@ export class _Blank extends React.Component {
           borderBottomWidth: 0,
           borderRadius: 0,
           textShadow: "0pt 0pt 0pt #000000",
-          textDecoration: "none",
-          textTransform: "none",
+          textDecoration: "underline overline",
+          textTransform: "uppercase",
           lineHeight: 1
         }}
         checked={this.state.Toggle_4}
@@ -184,8 +127,8 @@ export class _Blank extends React.Component {
           borderBottomWidth: 0,
           borderRadius: 0,
           textShadow: "0pt 0pt 0pt #000000",
-          textDecoration: "none",
-          textTransform: "none",
+          textDecoration: "underline overline",
+          textTransform: "lowercase",
           lineHeight: 1
         }}
       >
@@ -222,12 +165,149 @@ export class _Blank extends React.Component {
           borderBottomWidth: 0,
           borderRadius: 0,
           textShadow: "0pt 0pt 0pt #000000",
-          textDecoration: "none",
-          textTransform: "none",
+          textDecoration: "underline overline",
+          textTransform: "uppercase",
           lineHeight: 1
         }}
         value={this.state.Input_6}
         onChangeText={nextValue => this.setState({ Input_6: nextValue })}
+      />
+      <Input
+        placeholder="Sample text input placeholder"
+        editable={true}
+        multiline={true}
+        textStyle={{ height: 100, fontSize: 20, color: "#000000" }}
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          fontSize: 20,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontStyle: "normal",
+          fontWeight: "normal",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textShadow: "0pt 0pt 0pt #000000",
+          textDecoration: "none",
+          textTransform: "none",
+          lineHeight: 1
+        }}
+        value={this.state.Input_2}
+        onChangeText={nextValue => this.setState({ Input_2: nextValue })}
+      />
+      <Button
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "center",
+          verticalAlign: "baseline",
+          fontSize: 20,
+          color: "#000000",
+          backgroundColor: "#3366FF",
+          fontStyle: "normal",
+          fontWeight: "normal",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textShadow: "0pt 0pt 0pt #000000",
+          textDecoration: "none",
+          textTransform: "none",
+          lineHeight: 1
+        }}
+        onPress={() => alert("Pressed!")}
+      >
+        Press me!
+      </Button>
+      <Radio
+        text="Radio button"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textShadow: "0pt 0pt 0pt #000000",
+          textDecoration: "none",
+          textTransform: "none",
+          lineHeight: 1
+        }}
+        checked={this.state.Radio_4}
+        onChange={nextChecked => this.setState({ Radio_4: nextChecked })}
+      />
+      <CheckBox
+        text="Checkbox"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textShadow: "0pt 0pt 0pt #000000",
+          textDecoration: "none",
+          textTransform: "none",
+          lineHeight: 1
+        }}
+        checked={this.state.CheckBox_5}
+        onChange={nextChecked => this.setState({ CheckBox_5: nextChecked })}
       />
     </View>
   )
