@@ -1,6 +1,12 @@
 import axios from "axios"
+import {} from "react-native-dotenv"
+const newPlugin232 = axios.create({
+  baseURL:
+    "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/8004/storyboard/9273/",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const mobile23API = axios.create({
-  baseURL: "https://mobile-23-dev-8004.herokuapp.com/",
+  baseURL: "https://mobile-23-dev-8004.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_v1_customtext_list() {
